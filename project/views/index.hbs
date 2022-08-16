@@ -6,30 +6,21 @@
   </head>
   <body>
 
-    <div class='loginbox'>
-      <h2>로그인</h2>
-      <form action='#'>
-        <fieldset>
-          <legend>로그인 구역</legend>
-          <label for='loginid'>아이디(E-mail)</label>
-          <input
-            type='text'
-            id='loginid'
-            placeholder='아이디(E-mail)을 입력해 주세요'
-          />
-          <label for='loginpw'>비밀번호</label>
+    <div class='main'>
+      <div class='container'>
+        <h1 class='logo'>Project Manager</h1>
+        <div class='login_container'>
+          <input type='text' placeholder='ID' id='id' class='account' />
           <input
             type='password'
-            id='loginpw'
-            placeholder='비밀번호를 입력해 주세요'
+            placeholder='Password'
+            id='password'
+            class='account'
           />
-          <ul>
-            <li><a href='#'>아이디/비밀번호찾기</a></li>
-            <li><a href='#'>회원가입</a></li>
-          </ul>
-          <button type='submit'>로그인</button>
-        </fieldset>
-      </form>
+          <button id='login' class='account'>로그인</button>
+          <p id='alert' class='account'> </p>
+        </div>
+      </div>
     </div>
 
     <script src='https://unpkg.com/@babel/standalone/babel.min.js'></script>
