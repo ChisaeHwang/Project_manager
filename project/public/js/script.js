@@ -6,6 +6,7 @@ let errStack = 0;
 login.addEventListener('click', () => {
   if (id.value == 'cwh73090') {
     if (password.value == '014674cwh!') {
+      window.location.href = 'http://localhost:7000/main/';
       alert('로그인 되었습니다!');
     } else {
       alert('아이디와 비밀번호를 다시 한 번 확인해주세요!');

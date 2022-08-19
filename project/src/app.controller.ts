@@ -1,15 +1,19 @@
-import { Get, Controller, Render } from '@nestjs/common';
+import { Get, Controller, Render, Post } from '@nestjs/common';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  constructor(private appService: AppService) {}
+
   @Get()
   @Render('login')
-  root() {
-    return {
-      data: {
-        title: 'Chattings',
-        copyright: 'chi sae',
-      },
-    };
+  login() {
+    return;
+  }
+
+  @Get('main')
+  @Render('main')
+  main() {
+    return;
   }
 }
