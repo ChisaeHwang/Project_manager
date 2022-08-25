@@ -6,8 +6,14 @@ export class AppController {
   constructor(private appService: AppService) {}
 
   @Get()
-  @Render('login')
+  @Render('index')
   login() {
+    return;
+  }
+
+  @Get('login')
+  @Render('login')
+  signUp() {
     return;
   }
 
