@@ -8,6 +8,12 @@ export class AppController {
   constructor(private appService: AppService) {}
 
   @Get()
+  @Render('index')
+  login() {
+    return;
+  }
+
+  @Get()
   getHello(
     @Req() req: Request,
     @Body() body,
@@ -17,12 +23,6 @@ export class AppController {
     console.log(body);
     console.log(req);
     return this.appService.getHello();
-  }
-
-  @Get()
-  @Render('index')
-  login() {
-    return;
   }
 
   @Get('login')
