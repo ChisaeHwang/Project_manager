@@ -53,6 +53,7 @@ body {
   color: white;
   font-size: 1rem;
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .container .account {
