@@ -4,6 +4,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { LoginsService } from './logins/logins.service';
+import { LoginsController } from './logins/logins.controller';
 
 @Module({
   imports: [
@@ -15,8 +17,8 @@ import { AppService } from './app.service';
       useUnifiedTopology: true,
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, LoginsController],
+  providers: [AppService, LoginsService],
 })
 export class AppModule implements NestModule {
   configure() {
